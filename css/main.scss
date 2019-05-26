@@ -97,6 +97,7 @@ $color-lightgreen:#afc137;
 .howit{
     .box{
         border:10px solid $color-lightgreen;box-sizing:border-box;padding:30px 80px 30px 160px;position:relative;
+        @media(min-width:960px){border-left:none}
 
         &:after{content:'';width:123px;height:181px;background:url(../img/awesome/question.png) no-repeat;position:absolute;top:-37px;right:-10px}
     }
@@ -112,6 +113,60 @@ $color-lightgreen:#afc137;
     }
 }
 
+.case{
+    @extend %container-padding;
+
+    background:url(../img/backgrounds/case.jpg) no-repeat center / cover;margin-bottom:210px;
+
+    h2{color:#fff;margin-top:50px}
+
+    .uk-container{
+        max-width:980px;border-radius:10px;padding:0;
+        .uk-grid{margin-bottom:-180px;border-radius:10px}
+    }
+
+    .slider{
+        border-radius:10px 0 0 10px;overflow:hidden;
+        .slidenav{
+            font-size:0px;text-align:right;
+            a{
+                background:#ebf1df;color:#6b6b6b;display:inline-block;padding: 11px 10px;
+                &:hover,&:focus{background:#bbc0b1}
+            }
+        }
+    }
+
+    .info{
+        width:370px;padding:28px 30px;box-sizing:border-box;background:#fff;border-radius:0 10px 10px 0;overflow:hidden;
+
+        hr{border-color:#a8a8aa}
+
+        p{font-size:16px;line-height:23px}
+
+        .uk-button{min-width:252px;font-size:20px;line-height:48px}
+    }
+}
+
+.specialform{
+    background:url(../img/backgrounds/specialform.jpg) no-repeat top center / cover;
+    p{font-size:16px;padding-left:250px}
+}
+
+.offer{
+    @extend %container-padding;
+
+    background:url(../img/backgrounds/offer.jpg) no-repeat top right / cover;
+    @media(max-width:1700px){background-position:top left}
+    @media(max-width:959px){background:#fff}
+
+    p{font-size:22px}
+
+    .uk-grid{
+        max-width:960px;margin-top:55px;
+
+        h3{font:18px 'Gilroy Light',sans-serif}
+    }
+}
 
 // Headers
 h1,h2,h3,h4,.uk-h1{font-family:'Gilroy Bold',sans-serif;line-height:normal;color:#111}
@@ -125,7 +180,12 @@ h2{
     font-size:36px;
     @media(max-width:959px){font-size:30px}
     @media(max-width:639px){font-size:26px}
-
+    span{color:$color-lightgreen;font-style:italic}
+}
+h3,h4{
+    font-size:24px;
+    @media(max-width:959px){font-size:22px}
+    @media(max-width:639px){font-size:20px}
     span{color:$color-lightgreen;font-style:italic}
 }
 
@@ -138,7 +198,7 @@ h2{
         &:hover,&:focus{background:rgba(255,255,255,.1);color:#fff}
     }
     &.uk-button-green{
-        background:linear-gradient(to bottom, #a0a965 0%,$color-green 100%);border-bottom:4px solid #7a862f;
+        background:linear-gradient(to bottom, #a0a965 0%,$color-green 100%);border-bottom:4px solid #7a862f;color:#fff;font-family:'Gilroy Bold',sans-serif;
         box-shadow:0px 4px 0px 0px rgba(122, 134, 47, 0.004),0px 11px 46px 0px rgba(149, 161, 71, 0.39),inset 0px 12px 21px 0px rgba(196, 208, 119, 0.4);
         &:hover,&:focus{background:linear-gradient(to bottom, $color-green 0%,#a0a965 100%);color:#fff}
     }

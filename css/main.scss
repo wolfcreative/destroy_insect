@@ -86,6 +86,8 @@ $color-lightgreen:#afc137;
     @keyframes scroll{100%{background-position:-3000px 0}}
 }
 
+.main{overflow:hidden}
+
 .description{
     @extend %container-padding;
 
@@ -100,7 +102,7 @@ $color-lightgreen:#afc137;
 .howit{
     .box{
         border:10px solid $color-lightgreen;box-sizing:border-box;padding:30px 80px 30px 40px;position:relative;
-        @media(min-width:1280px){border-left:none;padding:30px 80px 30px 160px}
+        @media(min-width:1280px){padding:30px 80px 30px 170px}
         @media(max-width:959px){padding:25px 70px 25px 25px}
 
         &:after{content:'';width:123px;height:181px;background:url(../img/awesome/question.png) no-repeat;position:absolute;top:-37px;right:-10px}
@@ -122,12 +124,22 @@ $color-lightgreen:#afc137;
 .case{
     @extend %container-padding;
 
-    background:url(../img/backgrounds/case.jpg) no-repeat center / cover;margin-bottom:210px;
+    background:url(../img/backgrounds/case.jpg) no-repeat center / cover;margin-bottom:210px;position:relative;
+    
+    @media(min-width:1280px){
+        &:before{content:url(../img/howit-1.png);position:absolute;z-index:4;top:-520px;left:0}
+        &:after{content:url(../img/howit-2.png);position:absolute;z-index:5;top:-300px;right:0}
+    }
+    @media(max-width:1800px){&:before{left:-5%}}
+    @media(max-width:1700px){&:before{left:-10%}}
+    @media(max-width:1600px){&:before{left:-15%}}
+    @media(max-width:1500px){&:before{left:-20%}}
+    @media(max-width:1380px){&:before{left:-25%}}
 
     h2{color:#fff;margin-top:50px}
 
     .uk-container{
-        max-width:980px;border-radius:10px;
+        max-width:980px;border-radius:10px;position:relative;z-index:7;
         @media(min-width:1280px){padding:0}
 
         .uk-grid{margin-bottom:-180px;border-radius:10px}

@@ -106,17 +106,23 @@ $color-lightgreen:#afc137;
         @media(max-width:959px){padding:25px 70px 25px 25px}
 
         &:after{content:'';width:123px;height:181px;background:url(../img/awesome/question.png) no-repeat;position:absolute;top:-37px;right:-10px}
+        &:not(.uk-active){display:none}
     }
 
     .list{
-        width:360px;margin-left:10px;font:18px 'Gilroy Light',sans-serif;
+        width:360px;margin-left:10px;font:18px 'Gilroy Light',sans-serif;position:relative;z-index:7;
         @media(max-width:959px){width:300px;font-size:16px;margin-left:0}
         @media(max-width:769px) and (min-width:640px){width:230px;font-size:15px}
 
         .number{
-            width:70px;font:48px/42px 'Gilroy Bold',sans-serif;position:relative;
+            width:70px;font:48px/42px 'Gilroy Bold',sans-serif;position:relative;z-index:4;cursor:pointer;
 
             &:after{content:'';width:55px;height:3px;background:#afc137;display:block;position:absolute;border:4px solid #fff;border-bottom:10px solid #fff;top:27px;left:10px}
+
+            &:hover{
+                color:#555;
+                &:after{background:#7a8820}
+            }
         }
     }
 }
@@ -127,8 +133,8 @@ $color-lightgreen:#afc137;
     background:url(../img/backgrounds/case.jpg) no-repeat center / cover;margin-bottom:210px;position:relative;
     
     @media(min-width:1280px){
-        &:before{content:url(../img/howit-1.png);position:absolute;z-index:4;top:-520px;left:0}
-        &:after{content:url(../img/howit-2.png);position:absolute;z-index:5;top:-300px;right:0}
+        &:before{content:url(../img/howit-1.png);position:absolute;z-index:4;top:-520px;left:-3%}
+        &:after{content:url(../img/howit-2.png);position:absolute;z-index:5;top:-230px;right:0}
     }
     @media(max-width:1800px){&:before{left:-5%}}
     @media(max-width:1700px){&:before{left:-10%}}
@@ -136,7 +142,7 @@ $color-lightgreen:#afc137;
     @media(max-width:1500px){&:before{left:-20%}}
     @media(max-width:1380px){&:before{left:-25%}}
 
-    h2{color:#fff;margin-top:50px}
+    h2{color:#fff;margin-top:50px;position:relative;z-index:6}
 
     .uk-container{
         max-width:980px;border-radius:10px;position:relative;z-index:7;
@@ -309,6 +315,36 @@ footer{
     .privacy>a{font-size:14px;color:#fff}
 }
 
+.uk-modal{
+    &.uk-modal-text{
+        .uk-modal-dialog{
+            max-width:1140px!important;width:100%;
+
+            .title-box{
+                img{margin:-55px 0 0}
+                p{margin-bottom:35px}
+            }
+
+            h3{font-size:30px}
+
+            p{
+                font:24px 'Gilroy Light',sans-serif;
+                @media(max-width:959px){font-size:20px}
+                @media(max-width:639px){font-size:18px}
+            }
+
+            hr{border-color:#8f8f92}
+
+            form{
+                .uk-input{
+                    height:58px;border:1px solid #8f8f92;border-radius:100px;padding-left:25px;
+                    &::placeholder{color:#202025}
+                }
+            }
+        }
+    }
+}
+
 // Headers
 h1,h2,h3,h4,.uk-h1{font-family:'Gilroy Bold',sans-serif;line-height:normal;color:#111}
 h1,.uk-h1{
@@ -360,3 +396,4 @@ h3,h4{
 // UiKit Replace
 .uk-input{height:48px;border-radius:4px}
 .uk-lightbox{background:rgba(0, 0, 0, 0.9)}
+.uk-modal-title{font-size:26px}

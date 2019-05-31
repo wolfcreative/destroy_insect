@@ -76,7 +76,40 @@
 
                 <div class="uk-grid uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-margin-medium-top" data-uk-grid>
                     <div>
-                        <a href="#" class="uk-display-block uk-box-shadow-hover-large"><img src="img/description/advantage-1.jpg" alt="Эффективнее СВЧ-метода" /></a>
+                        <a href="#descr-1" class="uk-display-block uk-box-shadow-hover-large" data-uk-toggle><img src="img/description/advantage-1.jpg" alt="Эффективнее СВЧ-метода" /></a>
+                        
+                        <div id="descr-1" class="uk-modal uk-modal-text" data-uk-modal>
+                            <div class="uk-modal-dialog uk-modal-body">
+                                <button class="uk-modal-close-default" type="button" data-uk-close></button>
+
+                                <div class="title-box uk-grid uk-flex-middle uk-margin-remove-bottom">
+                                    <div class="uk-width-auto uk-visible@m">
+                                        <img src="img/modal/demo.png" alt="" />
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <p>Обрабатывается весь дом одновременно, в отличии от СВЧ метода (насекомые передвигаются по древесине, тем самым остаются особи не попадающие под облучение)</p>
+                                    </div>
+                                </div>
+                                <hr class="uk-margin-remove-top">
+
+                                <form action="" method="get" name="form-1" class="uk-grid-small uk-margin-medium-top uk-margin-bottom uk-flex-center" data-uk-grid>
+                                    <div class="uk-width-1-1 uk-text-center uk-margin-bottom">
+                                        <h3 class="uk-margin-small-bottom"><span>Узнайте больше</span> об обработке газом</h3>
+                                        <p class="uk-margin-small-top">Оставьте заявку. Мы перезвоним</p>
+                                    </div>
+                                    
+                                    <div class="uk-width-1-2@s uk-width-1-3@m">
+                                        <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="uk-width-1-2@s uk-width-1-3@m">
+                                        <input class="uk-input" type="tel" name="phone" placeholder="Телефон">
+                                    </div>
+                                    <div class="uk-width-1-2@s uk-width-1-3@m">
+                                        <button class="uk-button uk-button-green uk-button-medium feedback uk-width-1-1" type="button" name="send">Отправить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <a href="#" class="uk-display-block uk-box-shadow-hover-large"><img src="img/description/advantage-2.jpg" alt="Эффективнее Аэрозольно-влажной уборки" /></a>
@@ -91,15 +124,27 @@
         <div class="howit uk-margin-large-top uk-margin-medium-bottom" id="about">
             <div class="uk-container">
                 <div class="uk-grid uk-flex-middle uk-flex-center" data-uk-grid>
-                    <div class="uk-width-expand@s">
+                    <div class="uk-width-expand@s howit-container">
                         <div class="box">
                             <h2>Как происходит <span>обработка</span></h2>
 
                             <p>Первый (подготовительный) этап — очень ответственный. Рекомендуется всецело сконцентрироваться на том, чтобы обеспечить полную герметизацию дома, ведь газ (которым обрабатывается дерево), может улетучиться через незначительную, на первый взгляд, щель.</p>
                             <p>Проверяем объект на герметичность. При необходимости проводим греметизацию дома своими силами</p>
                         </div>
+                        <div class="box">
+                            <h2>2Как происходит <span>обработка</span></h2>
+
+                            <p>Первый (подготовительный) этап — очень ответственный. Рекомендуется всецело сконцентрироваться на том, чтобы обеспечить полную герметизацию дома, ведь газ (которым обрабатывается дерево), может улетучиться через незначительную, на первый взгляд, щель.</p>
+                            <p>Проверяем объект на герметичность. При необходимости проводим греметизацию дома своими силами</p>
+                        </div>
+                        <div class="box">
+                            <h2>3Как происходит <span>обработка</span></h2>
+
+                            <p>Первый (подготовительный) этап — очень ответственный. Рекомендуется всецело сконцентрироваться на том, чтобы обеспечить полную герметизацию дома, ведь газ (которым обрабатывается дерево), может улетучиться через незначительную, на первый взгляд, щель.</p>
+                            <p>Проверяем объект на герметичность. При необходимости проводим греметизацию дома своими силами</p>
+                        </div>
                     </div>
-                    <div class="list">
+                    <div class="list"  data-uk-switcher="connect: .howit-container;animation: uk-animation-slide-left-medium">
                         <div class="uk-grid uk-grid-small uk-flex-top">
                             <div class="number uk-width-auto">01</div>
                             <div class="uk-width-expand">Проверка герметичности объекта. При необходимости герметизация</div>
@@ -122,8 +167,8 @@
 
             <div class="uk-container uk-margin-medium-top">
                 <div class="uk-grid uk-grid-collapse uk-box-shadow-large" data-uk-grid>
-                    <div class="slider uk-width-expand@s">
-                        <div class="uk-position-relative uk-visible-toggle uk-light uk-height-1-1" tabindex="-1" data-uk-slideshow="autoplay:true">
+                    <div class="slider uk-width-expand@s" data-uk-slideshow>
+                        <div class="uk-position-relative uk-visible-toggle uk-light uk-height-1-1" tabindex="-1">
                             <ul class="uk-slideshow-items uk-height-1-1">
                                 <li>
                                     <img src="img/slider-1.jpg" alt="" data-uk-cover>
@@ -142,15 +187,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="info">
-                        <h3>Двухэтажный дом из оцилиндрованного бревна</h3>
-                        <hr />
-                        <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>Что было?</span></h4>
-                        <p class="uk-margin-small-top">Все стены, полы и потолки были заражены короедом, в том числе личинками</p>
-                        <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>А что сделали?</span></h4>
-                        <p class="uk-margin-small-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
-                    
-                        <a href="#modal-callback" class="uk-button uk-button-green uk-margin-top uk-margin-small-bottom" data-uk-toggle>Хочу так же</a>
+                    <div class="info uk-switcher">
+                        <div class="uk-switcher-item uk-active">
+                            <h3>Двухэтажный дом из оцилиндрованного бревна</h3>
+                            <hr />
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>Что было?</span></h4>
+                            <p class="uk-margin-small-top">Все стены, полы и потолки были заражены короедом, в том числе личинками</p>
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>А что сделали?</span></h4>
+                            <p class="uk-margin-small-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                        
+                            <a href="#modal-callback" class="uk-button uk-button-green uk-margin-top uk-margin-small-bottom" data-uk-toggle>Хочу так же</a>
+                        </div>
+                        <div class="uk-switcher-item">
+                            <h3>22Двухэтажный дом из оцилиндрованного бревна</h3>
+                            <hr />
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>Что было?</span></h4>
+                            <p class="uk-margin-small-top">Все стены, полы и потолки были заражены короедом, в том числе личинками</p>
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>А что сделали?</span></h4>
+                            <p class="uk-margin-small-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                        
+                            <a href="#modal-callback" class="uk-button uk-button-green uk-margin-top uk-margin-small-bottom" data-uk-toggle>Хочу так же</a>
+                        </div>
+                        <div class="uk-switcher-item">
+                            <h3>33Двухэтажный дом из оцилиндрованного бревна</h3>
+                            <hr />
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>Что было?</span></h4>
+                            <p class="uk-margin-small-top">Все стены, полы и потолки были заражены короедом, в том числе личинками</p>
+                            <h4 class="uk-margin-remove-top uk-margin-small-bottom"><span>А что сделали?</span></h4>
+                            <p class="uk-margin-small-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+                        
+                            <a href="#modal-callback" class="uk-button uk-button-green uk-margin-top uk-margin-small-bottom" data-uk-toggle>Хочу так же</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -345,7 +412,7 @@
     <div id="modal-callback" data-uk-modal>
         <div class="uk-modal-dialog">
             <div class="uk-modal-header">
-                <h4 class="uk-modal-title uk-text-center">Заказать обратный звонок</h4>
+                <h4 class="uk-modal-title uk-text-center">Получить бесплатную консультацию</h4>
             </div>
             <div class="uk-modal-body">
                 <form action="" method="get" name="form-1" class="uk-grid-small uk-margin-medium" data-uk-grid>
@@ -355,8 +422,8 @@
                     <div class="uk-width-1-2@s">
                         <input class="uk-input" type="tel" name="phone" placeholder="Телефон">
                     </div>
-                    <p class="uk-width-1-1 uk-text-center uk-margin-top">
-                        <button class="uk-button uk-button-red uk-button-medium feedback" type="button" name="send">Отправить</button>
+                    <p class="uk-width-1-1 uk-text-center uk-margin-medium-top">
+                        <button class="uk-button uk-button-green uk-button-medium feedback" type="button" name="send">Отправить</button>
                     </p>
                 </form>
             </div>
